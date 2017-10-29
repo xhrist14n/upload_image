@@ -1,0 +1,66 @@
+{
+  "name": "project",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "modernizr": "~2.8.3",
+    "blueimp-file-upload": "jQuery-File-Upload#~9.19.1",
+    "cookieconsent": "~3.0.4",
+    "jquery-ui": "jqueryui#~1.12.1",
+    "blueimp-tmpl": "~3.11.0",
+    "blueimp-load-image": "javascript-load-image#~2.17.0",
+    "blueimp-canvas-to-blob": "canvas-to-blob#~3.14.0",
+    "blueimp-gallery": "~2.27.1"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js",
+        "dist/fonts/*"
+      ]
+    },
+    "blueimp-gallery": {
+      "main": [
+        "css/blueimp-gallery.min.css",
+        "js/jquery.blueimp-gallery.min.js"
+      ]
+    },
+    "blueimp-file-upload": {
+      "main": [
+        "css/jquery.fileupload.css",
+        "css/jquery.fileupload-ui.css",
+        "js/vendor/jquery.ui.widget.js",
+        "js/jquery.iframe-transport.js",
+        "js/jquery.fileupload.js",
+        "js/jquery.fileupload-process.js",
+        "js/jquery.fileupload-image.js",
+        "js/jquery.fileupload-audio.js",
+        "js/jquery.fileupload-video.js",
+        "js/jquery.fileupload-validate.js",
+        "js/jquery.fileupload-ui.js"
+      ]
+    },
+    "blueimp-tmpl": {
+      "main": [
+        "js/tmpl.min.js"
+      ]
+    },
+    "blueimp-load-image": {
+      "main": [
+        "js/load-image.all.min.js"
+      ]
+    },
+    "blueimp-canvas-to-blob": {
+      "main": [
+        "js/canvas-to-blob.min.js"
+      ]
+    }
+
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
