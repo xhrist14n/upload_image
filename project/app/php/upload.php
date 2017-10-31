@@ -12,7 +12,7 @@ try{
         $name = basename($file["name"]);
         $explode_name = explode(".",$name);
         $extension = $explode_name[count($explode_name)-1];
-        $code = md5(soundex($name));
+        $code = md5(soundex($name).date("Y-m-d h:i:s"));
         $data['code'] = $code;
         $name = $code.".".$extension;
         $data['name'] = $name;

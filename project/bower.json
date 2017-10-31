@@ -10,7 +10,8 @@
     "blueimp-tmpl": "~3.11.0",
     "blueimp-load-image": "javascript-load-image#~2.17.0",
     "blueimp-canvas-to-blob": "canvas-to-blob#~3.14.0",
-    "blueimp-gallery": "~2.27.1"
+    "blueimp-gallery": "~2.27.1",
+    "json3": "^3.3.2"
   },
   "overrides": {
     "bootstrap": {
@@ -57,7 +58,6 @@
         "js/canvas-to-blob.min.js"
       ]
     }
-
   },
   "devDependencies": {
     "chai": "^4.1.2",

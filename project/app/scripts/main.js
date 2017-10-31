@@ -10,7 +10,15 @@ $(function () {
     if(!upload_url){
         upload_url = '';
     }
-    //console.log(upload_url);
+
+    var upload_image = '';
+    try{
+        upload_image = $("#upload_image_id").attr("data-url");
+    }catch(ex){}
+    if(!upload_image){
+        upload_image = '';
+    }
+    //console.log(upload_image);
 
 
     $('#fileupload').fileupload(
@@ -18,10 +26,24 @@ $(function () {
             url: upload_url,
             dataType: 'json',
             done: function (e, data) {
-                console.log(data.result);
-                /*$.each(data.result.files, function (index, file) {
-                    $('<p/>').text(file.name).appendTo('#files');
-                });*/
+                var value = '';
+                var images = new Array();
+                try{
+                    value = $("#"+upload_image).val();
+                    images = value.split(",");
+                }catch(ex){}
+                var image = '';
+                var flag =      data.result.success=="true";
+                flag = flag ||  data.result.success==true;
+                if( flag ){
+                    try{
+                        image = data.result.name;
+                        images.push(image);
+                        value = images.join(",");
+                    }catch(ex){}
+                }
+                $("#"+upload_image).val(value);
+                //console.log(value);
                 setTimeout(
                     function(){
                         $('#progress .progress-bar').css('width','0%');

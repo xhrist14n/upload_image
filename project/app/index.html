@@ -49,6 +49,7 @@
             <i class="glyphicon glyphicon-plus"></i>
             <span>Subir Imagen ... </span>
             <input id="fileupload" type="file" name="fileupload">
+            <input id="image" type="hidden" name="imagen" value="">
         </span>
         <br>
         <div id="progress" class="progress">
@@ -67,6 +68,9 @@
     <div id="upload_url" data-url="php/upload.php">
     </div>
 
+    <div id="upload_image_id" data-url="image">
+    </div>
+
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -76,6 +80,7 @@
     <script src="bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
