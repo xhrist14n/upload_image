@@ -87,3 +87,16 @@ body {
     border-bottom: 0;
   }
 }
+
+
+.covered-image{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width:100%;
+  padding-top:20px;
+  padding-bottom:20px;
+  margin-top:20px;
+  margin-bottom:20px;
+}
